@@ -24,7 +24,7 @@ def login():
     user_data = load_user_data()
 
     for user in user_data:
-        if user[0] == username and user == email [1] and user[2] == password:
+        if user[0] == email and user == username [1] and user[2] == password:
             return True
 
     return False
@@ -41,7 +41,7 @@ def signup():
             print("Username already exists. Please try again.")
             return
 
-    user_data.append([username, password])
+    user_data.append([email,username, password])
     save_user_data(user_data)
     print("Account created successfully. Please sign in.")
 
