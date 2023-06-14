@@ -1,7 +1,13 @@
 #ini bikinya disini ya ges
 #SEMANGATTT!!
+#seammgattt
 
 import csv
+
+
+print("SELAMAT DATANG GUISSSS!")
+print("MAU CARI KOS YA???!")
+print("LOGIN DULU YA BESTIII, KALAU BELUM PUNYA AKUN SIGN UP DULS OKE")
 
 def load_user_data():
     # Load user data from the CSV file
@@ -17,7 +23,7 @@ def save_user_data(user_data):
         writer.writerows(user_data)
 
 def login():
-    email = input ("enter your email:")
+    email = input ("enter your email     :")
     username = input("Enter your username: ")
     password = input("Enter your password: ")
 
@@ -63,3 +69,19 @@ elif choice == "2":
     signup()
 else:
     print("Invalid option.")
+
+def datauser():
+    global nama
+
+    print('                 INFORMASI PENGGUNA')
+    nama = input('Masukkan username anda :')
+    for i in nama:
+        if i.isdigit():
+            print("Tolong Masukan Dengan Huruf")
+            datauser()
+    print()
+    print('======================================================')
+    print()
+    print(                " Selamat Datang", nama, "!")
+    print(                " Silakan pilih kos yang lo mau deh", nama, "!")
+datauser()
